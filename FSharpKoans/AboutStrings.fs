@@ -14,19 +14,19 @@ module ``about strings`` =
     let StringValue() =
         let message = "hello"
 
-        AssertEquality message __
+        AssertEquality message "hello"
 
     [<Koan>]
     let StringConcatValue() =
         let message = "hello " + "world"
 
-        AssertEquality message __
+        AssertEquality message "hello world"
 
     [<Koan>]
     let FormattingStringValues() =
         let message = sprintf "F# turns it to %d!" 11
 
-        AssertEquality message __
+        AssertEquality message "F# turns it to 11!"
 
         //NOTE: you can use printf to print to standard output
 
@@ -37,13 +37,13 @@ module ``about strings`` =
     let FormattingOtherTypes() =
         let message = sprintf "hello %s" "world"
 
-        AssertEquality message __
+        AssertEquality message "hello world"
 
     [<Koan>]
     let FormattingAnything() =
         let message = sprintf "Formatting other types is as easy as: %A" (1, 2, 3)
 
-        AssertEquality message __
+        AssertEquality message "Formatting other types is as easy as: (1, 2, 3)"
 
     (* NOTE: For all the %formatters that you can use with string formatting 
              see: https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/plaintext-formatting *)
@@ -56,7 +56,7 @@ module ``about strings`` =
                         expiali\
                         docious"
 
-        AssertEquality message __
+        AssertEquality message "supercalifragilisticexpialidocious"
 
     [<Koan>]
     let Multiline() =
@@ -66,8 +66,7 @@ module ``about strings`` =
                         five
                         lines"
 
-        AssertEquality
-              message __
+        AssertEquality message "This\n                        is\n                        on\n                        five\n                        lines"
 
     [<Koan>]
     let ExtractValues() =
@@ -79,8 +78,8 @@ module ``about strings`` =
  (* A single character is denoted using single quotes, example: 'c',
         not double quotes as you would use for a string *)
            
-        AssertEquality first __
-        AssertEquality other __
+        AssertEquality first 'h'
+        AssertEquality other 'o'
 
     [<Koan>]
     let ApplyWhatYouLearned() =
