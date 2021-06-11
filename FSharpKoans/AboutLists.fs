@@ -1,4 +1,5 @@
-﻿namespace FSharpKoans
+﻿//
+namespace FSharpKoans
 open FSharpKoans.Core
 open System.Collections.Generic
 
